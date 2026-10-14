@@ -340,7 +340,7 @@ AuthManager::LoginFuture AuthManager::login() {
             co_return Err("Incompatible Geometry Dash server URL: <cr>{}</c> (expected <cy>{}</c>)", data->serverUrl, m_serverMetadata->gdBaseUrl);
         }
 
-        GEODE_CO_UNWRAP(argon::setServerUrl(m_serverMetadata->argonBaseUrl));
+        GEODE_CO_UNWRAP(argon::setServerUrl("https://xps-argon.lncvrt.xyz/v1");
     }
 
     auto argonRes = co_await argon::startAuth(data.value());
